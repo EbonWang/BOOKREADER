@@ -1,0 +1,35 @@
+{
+  "name": "reader",
+  "version": "0.1.0",
+  "description": "原生桌面端电子书阅读器（TXT / EPUB）",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/parser.test.js",
+    "dist": "electron-builder --win"
+  },
+  "author": "",
+  "license": "MIT",
+  "build": {
+    "appId": "com.example.reader",
+    "productName": "阅读器",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.11.2",
+    "jszip": "^3.10.2"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "^26.15.3"
+  }
+}

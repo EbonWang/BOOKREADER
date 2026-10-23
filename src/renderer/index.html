@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>阅读器</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="brand">
+        <span class="brand-icon">&#128366;</span>
+        <span class="brand-name">阅读器</span>
+      </div>
+      <button id="import-btn" class="import-btn" type="button">
+        <span class="btn-icon">&#65291;</span>
+        <span>导入书籍</span>
+      </button>
+      <div class="book-meta">
+        <span id="book-title" class="book-title">未导入书籍</span>
+        <span id="book-format" class="badge" hidden></span>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside id="toc-panel" class="toc-panel" hidden>
+        <div class="toc-header">目录</div>
+        <ul id="toc-list" class="toc-list"></ul>
+      </aside>
+
+      <section id="content-area" class="content-area">
+        <div id="empty-state" class="empty-state">
+          <div class="empty-icon">&#128218;</div>
+          <p class="empty-title">还没有书籍</p>
+          <p class="empty-hint">点击左上角「导入书籍」，选择本地 TXT 或 EPUB 文件开始阅读</p>
+        </div>
+        <div id="content-text" class="content-text" hidden></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
